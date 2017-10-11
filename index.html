@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>pathCHEMO</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/mchemo.css" rel="stylesheet">
+
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet"> -->
+    <!-- <link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="index.html">
+                    <strong>pathCHEMo</strong>
+                    <div class="subTitle">pathways of Chemotherapy Resistance</div>
+                </a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+                <li>
+                    <form class="navbar-form navbar-left">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search.." name="q">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+
+                        </form>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#single"><i class="fa fa-fw fa-list" aria-hidden="true"></i> Cancer Type <i class="fa fa-fw fa-caret-right pull-right mainLevel"></i></a>
+                        <ul id="single" class="collapse">
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#singleCancer"><i class="fa fa-fw fa-plus-square secondLevel"></i>  Single Cancer Analysis </a>
+                                <ul id="singleCancer" class="collapse">
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#brainCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Brain Cancer </a>
+                                        <ul id="brainCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Brain Lower Grade Glioma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Glioblastoma Multiforme</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#bladderCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Bladder Cancer </a>
+                                        <ul id="bladderCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Bladder Urothelial Carcinoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#breastCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Breast Cancer </a>
+                                        <ul id="breastCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Breast Invasive Carcinoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#cervicalCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Cervical Cancer </a>
+                                        <ul id="cervicalCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Cervical Squamous Cell Carcinoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#colorectalCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Colorectal Cancer </a>
+                                        <ul id="colorectalCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Colon Adenocarcinoma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Rectum Adenocarcinoma</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#kidneyCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Kidney Cancer</a>
+                                        <ul id="kidneyCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Kidney Chromophobe</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Kidney Renal Clear Cell Carcinoma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Kidney Renal Papillary Cell Carcinoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#leukemia"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Leukemia</a>
+                                        <ul id="leukemia" class="collapse">
+                                            <li>
+                                                <a href="#">Acute Myeloid Leukemia</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#lungCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Lung Cancer </a>
+                                        <ul id="lungCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Lung Adenocarcinoma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Lung Squamous Cell Carcinoma</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#ovaryCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Ovary Cancer</a>
+                                        <ul id="ovaryCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Ovarian Serous Cystadenocarcinoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#pancreaticCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Pancreatic Cancer</a>
+                                        <ul id="pancreaticCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Pancreatic Adenocarcinoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#skinCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Skin Cancer</a>
+                                        <ul id="skinCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Skin Cutaneous Melanoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#stomachCancer"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Stomach Cancer</a>
+                                        <ul id="stomachCancer" class="collapse">
+                                            <li>
+                                                <a href="#">Stomach Adenocarcinoma</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#panCancer"><i class="fa fa-fw fa-plus-square secondLevel"></i>  Pan Cancer Analysis </a>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+
+                        <a href="javascript:;" data-toggle="collapse" data-target="#treatment"><i class="fa fa-fw fa-medkit"></i> Treatment Type<i class="fa fa-fw fa-caret-right pull-right mainLevel"></i></a>
+
+                        <ul id="treatment" class="collapse">
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#singleChemo"><i class="fa fa-fw fa-plus-square secondLevel"></i>  Chemo Agents </a>
+                                <ul id="singleChemo" class="collapse">
+
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#singleChemoAgents"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Single Treatment </a>
+                                        <ul id="singleChemoAgents" class="collapse">
+                                            <li>
+                                                <a href="#">Alkylating Agent</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Angiogenesis Inhibitor</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Antimetabolite</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Antitumor Antibiotic</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Plant Alkanoid</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Topoisomerase Inhibitor</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#"><i class="fa fa-fw fa-plus-square thirdLevel"></i>  Multiple Treatment</a>
+
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#nonChemo"><i class="fa fa-fw fa-plus-square secondLevel"></i>  Non-Chemo Agents</a>
+                                <ul id="nonChemo" class="collapse">
+
+                                    <li>
+                                        <a href="javascript:;" data-toggle="collapse" data-target="#nonChemoSingle"><i class="fa fa-fw fa-plus-square"></i>  Single Treatment </a>
+                                        <ul id="nonChemoSingle" class="collapse">
+                                            <li>
+                                                <a href="#">Biphosphonate Derivative</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Cytokine Agent</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Folic Acid Antagonist</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Virus Therapy</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-fw fa-plus-square"></i>  Multiple Treatment</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#dataType"><i class="fa fa-fw fa-bar-chart-o"></i> Data Type<i class="fa fa-fw fa-caret-right pull-right mainLevel"></i></a>
+                        <ul id="dataType" class="collapse">
+
+                            <li>
+                                <a href="#">  Gene Expression</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#methylation"><i class="fa fa-fw fa-plus-square secondLevel"></i>  DNA Methylation </a>
+                                <ul id="methylation" class="collapse">
+
+                                    <li>
+                                        <a href="#">Beta Value</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">M Value</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#clinicalData"><i class="fa fa-fw fa-plus-square secondLevel"></i>  Clinical Data</a>
+                                <ul id="clinicalData" class="collapse">
+                                    <li>
+                                        <a href="#"> Clinical Patients</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Follow-up</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Drug</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Radiation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper" class="container-fluid">
+
+            <div class="container-fluid main">
+
+                <!-- Page Heading -->
+
+                <div class="row navCrumbs">
+                    <ol class="breadcrumb breadcrumb-arrow">
+                        <li><a href="#">Genomic / Epigenomic Analysis</a></li>
+                        <li><a href="#">Molecular Pathway</a></li>
+                        <li class="active"><span>Clinical Validation</span></li>
+                    </ol>
+
+                </div>
+
+
+                <!-- /.row -->
+                <div class="row">
+                    <div class="well well-sm col-sm-12">
+                        <div class="container-fluid info">
+                            <div class="row">
+                                <button type="button" class="btn btn-primary col-sm-offset-2 col-sm-4 ">
+                                                     <strong>Cancer Type</strong></button>
+                                <button type="button" class="btn btn-default col-sm-4">
+                                                         <strong>...</strong></button>
+                            </div>
+                            <div class="row">
+                                <button type="button" class="btn btn-primary col-sm-offset-2 col-sm-4">
+                                             <strong>Treatment</strong></button>
+                                <button type="button" class="btn btn-default col-sm-4">
+                                                                           <strong>.... </strong></button>
+                            </div>
+                            <div class="row">
+                                <button type="button" class="btn btn-primary col-sm-offset-2 col-sm-4">
+                                         <strong>Data Type</strong> </button>
+                                <button type="button" class="btn btn-default col-sm-4"> <strong>...</strong> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="well well-sm col-sm-12">
+                        <div class="row info">
+                            <div class="col-sm-5">
+                                <h4 class="text-primary patient"><strong class="text-center">  Select Patient:</strong> </h4>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="form-group">
+                                    <select class="form-control" id="sel1">
+                                              <option>-------</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="well well-sm text-center">
+                        <div class="jumbotron">
+                            <p class="text-success"> This section is under construction! </p>
+                        </div>
+                        <!-- <div class="table-responsive">
+                            <table class="table table-hover">
+
+                                <thead>
+                                    <tr>
+                                        <th> bcd_patient_barcode </th>
+                                        <th> drug_name </th>
+                                        <th> therapy_type </th>
+                                        <th> days_to_drug_therapy_start </th>
+                                        <th> therapy_ongoin </th>
+                                        <th> days_to_drug_therapy_end </th>
+                                        <th> More.. </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                    </tr>
+                                    <tr>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                    </tr>
+                                    <tr>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                    </tr>
+                                    <tr>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                    </tr>
+                                    <tr>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                        <td> --- </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-lg btn-primary pull-right">
+                    Submit
+                  </button>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for the main page-->
+    <script src="js/mchemo.js">
+    </script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+    </div>
+    </div>
+</body>
+
+</html>
